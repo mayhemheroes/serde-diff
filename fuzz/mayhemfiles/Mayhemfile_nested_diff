@@ -1,0 +1,7 @@
+project: serde-diff
+target: nested_diff
+duration: 90
+
+cmds:
+    - cmd: /nested_diff
+

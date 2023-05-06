@@ -25,3 +25,9 @@ name = "diff"
 path = "fuzz_targets/diff.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "nested_diff"
+path = "fuzz_targets/nested_diff.rs"
+test = false
+doc = false
