@@ -1,0 +1,7 @@
+project: serde-diff
+target: diff
+duration: 90
+
+cmds:
+    - cmd: /diff
+
