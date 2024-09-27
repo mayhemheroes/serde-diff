@@ -1,0 +1,33 @@
+[package]
+name = "serde-diff-fuzz"
+version = "0.1.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+serde =  { version = "1", features = [ "derive" ] }
+serde_json = "1.0"
+
+[dependencies.serde-diff]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "diff"
+path = "fuzz_targets/diff.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "nested_diff"
+path = "fuzz_targets/nested_diff.rs"
+test = false
+doc = false
